@@ -51,4 +51,59 @@ console.log(checkWinner(dolphins,koalas));
  console.log(billvalues);
  console.log(tips);
  console.log(finalBill);
+ //coding challenge
+  var marksInfo ={name :'Mark Miller',
+                   mass: 78,
+                    height:1.69,
+                bmi: function(){
+                    this.bbmi= this.mass/this.height**2;
+                    return this.bbmi;                   
+                } }
+var johnsInfo={name: 'John Smith',
+                mass: 92,
+                height:1.95,
+            bmi:function(){
+               this.bbmi= this.mass/this.height**2;
+                return this.bbmi;
+            } }
+            console.log(marksInfo.bmi(),johnsInfo.bmi());
+
+            if(marksInfo.bmi()>johnsInfo.bmi()){
+                console.log(`${marksInfo.name},s BMI ${marksInfo.bmi()} is higher than ${johnsInfo.name}'s ${johnsInfo.bmi()}`);
+            }
+            else{
+                console.log(`${johnsInfo.name},s BMI ${johnsInfo.bmi()} is higher than ${marksInfo.name}'s ${marksInfo.bmi()}`); 
+            }
+// coding challange 4
+ var bills =[22,295,176,440,37,105,10,1100,86,52];
+ var tips=[];
+ var totals =[];
+
+ for(i=0; i<bills.length;i++){
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i]+tips[i]);
+
+
+ }
+ console.log(`tips is ${tips}`);
+ console.log(` total amount is${totals}`);
+
+//arr=[1,2,3,4,5,7];
+
+
+
+    function calcAverage(arr){
+        var sum=0;
+        for(i in arr)
+            sum=sum+arr[i];
+            return sum/arr.length;
+        }
+       // var avg= sum/totals.length;
+    
+      
+   
+    
+ 
+
+ console.log(calcAverage(totals))
 

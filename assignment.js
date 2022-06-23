@@ -226,3 +226,42 @@ else{
  neighbourCountry[2]='Bhutan';
  console.log(neighbourCountry)
 
+
+ //lecture introduction to objects
+  var myCountry = {country:'INDIA',
+  capital:'Delhi',
+  language:'Hindi',
+  population:13400000000 ,
+  neightbour:['china','banglaesh','nepal','pakistan','afganistan'],
+  
+  describe: function(){
+    return `${this.country} has ${this.population} ${this.languange} speaking people,${this.neightbour.length} neightbour country and capital  called ${this.capital}`
+  }
+
+  , checkIsland: function(){
+    isisland = `${this.neightbour.length ? false : true }`
+
+    return isisland;
+    
+  }
+};
+  console.log(myCountry);
+console.log(myCountry.describe(),myCountry.checkIsland());
+
+
+/// iteraion the for loop
+
+for(var i=1; i<=50; i++ ){
+    console.log(` voter number ${i} is currently voting`);
+}
+
+var listOfNeighbours =[['canada','Mexico'],['spain'],['norway','sweeden','russia']];
+
+for( i=0; i<=listOfNeighbours.length;i++){
+    for(var j=0; j<listOfNeighbours[i].length;j++){
+        console.log(`neighbours :  ${listOfNeighbours[i][j]}`);
+
+    }
+}
+
+
