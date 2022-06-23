@@ -108,7 +108,19 @@ switch(language){
 ///////fundamental 2
 
 
-
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
+console.log("///////////////////////////////////////////////////////////////////////////");
 
 
 
@@ -142,9 +154,9 @@ console.log(describeCountry('uk',50000000,'london'));
 console.log(describeCountry('canada',30000000,'Toronto'));
 // function declaration vs expression
 
-function percentageofworld(pop,country){
-    var perofcountry = (pop*10)/7900000000;
-    return `${country}'s has ${pop} population so its about ${perofcountry}% of worlds `;
+function percentageofworld(pop){
+    return (pop*10)/7900000000;
+    //return `${country}'s has ${pop} population so its about ${perofcountry}% of worlds `;
 }
 console.log(percentageofworld(14410000000,'China'));
 console.log(percentageofworld(500000000,'canadA'));
@@ -155,3 +167,62 @@ var perOfWorld= function(pop,country){
 }
 var popPer=perOfWorld(14410000000,'china');
 console.log(popPer);
+
+//arrow function
+
+const perOfWorld3 = (pop,country)=>{
+    return `${country} has ${pop} which is  ${(pop*10)/7900000000} % world's population`;
+}
+var popPerWorld = perOfWorld3(1441000000,'China');
+console.log(popPerWorld)
+
+////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+//////////Function Calling other function On hand
+
+function cutFruitPieces(fruit){
+    return fruit * 4;
+}
+
+function fruitProcessor(apples,oranges){
+    const applesPieces = cutFruitPieces(apples);
+    const orangespieces = cutFruitPieces(oranges);
+
+
+    const juice = `jucie with ${applesPieces} pieces of  apples and ${orangespieces}  pieces of  oranges.`;
+    return juice;
+}
+console.log(fruitProcessor(4,3));
+
+// lecture function calling other function
+function describePopulation(popCountry,country){
+    const popu = percentageofworld(popCountry);
+
+    const describepop = `${country} has ${popCountry} people, which is about ${popu} of the world`
+    return describepop;
+}
+
+console.log(describePopulation(14410000000,'China'));
+console.log(describePopulation(14000000,"Canada"));
+console.log(describePopulation(1340000000,country));
+
+var neighbourCountry = ['china','banglaesh','nepal','pakistan','afganistan'];
+console.log(neighbourCountry);
+neighbourCountry.push('Utopia');
+console.log(neighbourCountry);
+dissolved = neighbourCountry.pop('Utopia')
+console.log(dissolved)
+console.log(neighbourCountry);
+
+if(neighbourCountry.includes('Germany')){
+    console.log("the country is in center europe");
+}
+else{
+    console.log("the country is no in center europe");
+}
+ console.log(neighbourCountry.indexOf('nepal'));
+
+ neighbourCountry[2]='Bhutan';
+ console.log(neighbourCountry)
+
