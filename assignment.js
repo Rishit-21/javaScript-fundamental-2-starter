@@ -207,6 +207,9 @@ console.log(describePopulation(14410000000,'China'));
 console.log(describePopulation(14000000,"Canada"));
 console.log(describePopulation(1340000000,country));
 
+
+//array
+
 var neighbourCountry = ['china','banglaesh','nepal','pakistan','afganistan'];
 console.log(neighbourCountry);
 neighbourCountry.push('Utopia');
